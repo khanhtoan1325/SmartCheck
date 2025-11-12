@@ -1,50 +1,85 @@
-# Welcome to your Expo app 👋
+🕒 Attendance App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Attendance App là ứng dụng chấm công thông minh được phát triển bằng React Native (Expo), giúp doanh nghiệp và nhân viên dễ dàng thực hiện check-in / check-out mọi lúc, mọi nơi thông qua mã QR hoặc mã thay thế, kết hợp với định vị GPS và xác thực thời gian thực.
 
-## Get started
+Ứng dụng hướng đến mục tiêu đơn giản hóa quy trình chấm công, tăng độ chính xác và hạn chế gian lận trong quản lý nhân sự hiện đại.
 
-1. Install dependencies
+🚀 Tính năng nổi bật
+🧾 1. Chấm công thông minh
 
-   ```bash
-   npm install
-   ```
+✅ Chấm công bằng mã QR – Quét mã do hệ thống cấp để điểm danh nhanh chóng và chính xác.
 
-2. Start the app
+🔑 Chấm công bằng mã thay thế (Manual Code) – Cho phép nhập mã thủ công khi camera hoặc QR không khả dụng.
 
-   ```bash
-   npx expo start
-   ```
+🌍 2. Xác thực vị trí và thời gian thực
 
-In the output, you'll find options to open the app in a
+📍 Xác thực vị trí (GPS) – Ghi nhận vị trí check-in/check-out để đảm bảo nhân viên có mặt tại đúng khu vực quy định.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+⏱️ Cập nhật mã QR động (Dynamic QR) – Mã QR được tự động làm mới sau mỗi chu kỳ (ví dụ 5 phút), ngăn chặn việc dùng lại mã cũ.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+👤 3. Quản lý người dùng và dữ liệu
 
-## Get a fresh project
+🔐 Đăng nhập / đăng xuất an toàn – Xác thực người dùng bằng tài khoản và token bảo mật.
 
-When you're ready, run:
+📅 Xem lịch sử chấm công – Dễ dàng theo dõi toàn bộ lịch sử check-in / check-out trong ứng dụng.
 
-```bash
-npm run reset-project
-```
+🧭 Phân biệt trạng thái Check-in / Check-out – Giao diện trực quan, rõ ràng từng lượt chấm công.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+🖥️ 4. Quản lý và giám sát (Dành cho Admin)
 
-## Learn more
+👨‍💼 Bảng điều khiển tổng hợp (Dashboard) – Theo dõi danh sách nhân viên, thời gian chấm công, và trạng thái hiện tại.
 
-To learn more about developing your project with Expo, look at the following resources:
+📊 Thống kê năng suất – Tính toán giờ làm việc, thời gian đi muộn / về sớm. (Tính năng mở rộng)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+🛠️ Công nghệ sử dụng
+Thành phần	Công nghệ
+Frontend	React Native (Expo)
+Ngôn ngữ	JavaScript / TypeScript
+API Backend	Node.js (Express)
+Cơ sở dữ liệu	MySQL / MongoDB
+Định vị	Expo Location API
+Quét mã	expo-camera / react-qr-code
+Xác thực	JWT (JSON Web Token)
+⚙️ Quy trình hoạt động
 
-## Join the community
+Admin hệ thống tạo mã QR chứa token động (TTL = 300s).
 
-Join our community of developers creating universal apps.
+Nhân viên mở app → Quét mã QR hoặc nhập mã thủ công.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Ứng dụng gửi yêu cầu đến server kèm token, userId, và vị trí GPS.
+
+Server xác thực tính hợp lệ của token, thời gian, và vị trí.
+
+Nếu hợp lệ → ghi dữ liệu chấm công vào CSDL và trả kết quả thành công.
+
+📲 Màn hình chính trong ứng dụng
+
+Màn hình đăng nhập / đăng xuất
+
+Trang chấm công (QR / mã thay thế)
+
+Màn hình hiển thị mã QR động
+
+Trang lịch sử chấm công (History)
+
+Trang hồ sơ cá nhân (Profile)
+
+💡 Lợi ích mang lại
+
+Tự động hóa quy trình chấm công, giảm phụ thuộc vào sổ sách thủ công.
+
+Giảm thiểu gian lận (chấm công hộ, sai vị trí, sai giờ).
+
+Dễ dàng mở rộng và tích hợp với các hệ thống HRM (quản lý nhân sự).
+
+Giao diện thân thiện, phù hợp cho mọi loại hình doanh nghiệp.
+
+🔒 Bảo mật
+
+Mỗi mã QR chỉ hợp lệ trong thời gian ngắn (TTL).
+
+Token được mã hóa bằng JWT.
+
+Xác thực người dùng qua API bảo mật.
+
+Ẩn thông tin nhạy cảm bằng file .env (không commit)
