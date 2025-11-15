@@ -195,7 +195,7 @@ const useTimeTracking = () => {
     regenerateCode();
   };
 
-  // Bấm nút check-out (nếu có)
+  // Bấm nút check-out
   const handleCheckout = async () => {
     const ok = await saveCheckoutToServer();
     if (!ok) return;
