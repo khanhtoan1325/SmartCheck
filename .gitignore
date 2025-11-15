@@ -65,3 +65,5 @@ config.json
 # Database connection file
 db.js
 db.json
+#//
+api.ts
