@@ -1,13 +1,14 @@
 #  Attendance App — Hệ thống chấm công thông minh
 
 > Ứng dụng chấm công hiện đại giúp doanh nghiệp theo dõi giờ làm việc của nhân viên mọi lúc, mọi nơi.  
-> Hỗ trợ chấm công bằng **QR Code**, **định vị GPS**, và **mã chấm công thủ công**.
+> Hỗ trợ chấm công bằng**FaceID** **QR Code**, **định vị GPS**, và **mã chấm công thủ công**.
 
 ---
 
 ##  Tính năng nổi bật
 
- **Chấm công bằng mã QR** – Nhân viên quét mã QR duy nhất tại địa điểm làm việc.  
+ **Chấm công bằng mã QR** – Nhân viên quét mã QR duy nhất tại địa điểm làm việc.
+ **Chấm công bằng FaceID** – Nhân viên thực hiện đăng ký khuôn mặt và chụp ảnh chấm công bằng khuôn mặt.  
  **Ghi nhận vị trí GPS** – Xác định vị trí thực tế của nhân viên khi chấm công.  
  **Quản lý nhân viên** – Thêm, xóa, sửa và xem danh sách nhân viên nhanh chóng.  
  **Báo cáo thời gian làm việc** – Hiển thị lịch sử chấm công theo ngày/tháng.  
