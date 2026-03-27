@@ -16,13 +16,13 @@
  **Xác thực tài khoản** – Đăng nhập và phân quyền người dùng (Admin / User).
 
 
- Công nghệ sử dụng
-Thành phần	Công nghệ
-Frontend	React Native (Expo), Tailwind, Axios
-Backend	Node.js, Express.js
-Database	MySQL
-Authentication	JWT (JSON Web Token)
-Version Control	Git & GitHub
+**Công nghệ sử dụng**
+**Thành phần	Công nghệ**
+**Frontend**	React Native (Expo), Tailwind, Axios
+**Backend**	Node.js, Express.js
+**Database**	MySQL
+**Authentication**	JWT (JSON Web Token)
+**Version Control**	Git & GitHub
 
 
  Tác giả
